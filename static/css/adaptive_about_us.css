@@ -1,0 +1,54 @@
+/* Large device */
+@media only screen and (max-width: 1200px){
+
+}
+/* Medium device/desktops */
+@media only screen and (max-width: 992px){
+
+}
+/* Small device/tablets */
+@media only screen and (max-width: 768px){
+
+}
+/* Extra small device/phone */
+@media only screen and (max-width: 480px){
+    #about {
+        margin: 30px 0;
+    }
+    .about-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+    .reverse img{
+        display: none;
+    }
+    .about-text{
+        width: 100%;
+        text-align: center;
+    }
+    .about-text h1 {
+        margin-bottom: 10px;
+    }
+    .about-flex img{
+        width: 70%;
+        margin-top: 10px;
+    }
+    #advant{
+        margin: 50px 0 20px;
+    }
+    #advant img {
+        width: 100%;
+    }
+    #partners {
+        margin: 60px 0;
+    }
+    .row .partner {
+        width: 19%;
+        padding: 5px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+}

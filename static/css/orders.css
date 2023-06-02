@@ -1,0 +1,23 @@
+#orders{
+    margin: 50px 0;
+}
+.orders-list, .orders-rows{
+    display: flex;
+    justify-content: space-between;
+}
+.orders-list p{
+    width: 15%;
+}
+.orders-row{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+}
+.orders-row img{
+    width: 80%;
+}
+.orders-row h4{
+    margin-bottom: 20px;
+}

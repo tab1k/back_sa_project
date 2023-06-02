@@ -1,0 +1,30 @@
+/* Large device */
+@media only screen and (max-width: 1200px){
+    .popup_form{
+        width: 50%;
+        display: flex;
+    }
+}
+/* Medium device/desktops */
+@media only screen and (max-width: 992px){
+    .popup_form{
+        width: 50%;
+        display: flex;
+    }
+}
+/* Small device/tablets */
+@media only screen and (max-width: 768px){
+    .popup_form{
+        padding: 50px 100px;
+        width: 65%;
+        display: flex;
+    }
+}
+/* Extra small device/phone */
+@media only screen and (max-width: 480px){
+    .popup_form{
+        padding: 0;
+        width: 85%;
+        display: flex;
+    }
+}

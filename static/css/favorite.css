@@ -1,0 +1,93 @@
+.flex-search{
+     position: relative;
+}
+.flex-search input{
+    width: 100%;
+    padding: 10px 25px;
+    border-radius: 8px;
+   outline: none;
+   border-color: rgb(0, 0, 0, 0.2);
+   font-size: 15px;
+}
+.flex-search button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+.flex-search button i{
+    font-size: 17px;
+    color: rgb(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.flex-search button i:hover{
+    color: rgb(0, 0, 0, 0.7);
+}
+
+.left{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.flex-search, .filter{
+    width: 50%;
+    height: 100%;
+}
+.filter{
+    width: 30%;
+    position: relative;
+}
+.filter p{
+    cursor: pointer;
+}
+.filter-up{
+    width: 100%;
+    padding: 10px 25px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: rgb(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+.fa-caret-down{
+    margin-left: 42%;
+}
+.filter-down{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: rgb(0, 0, 0, 0.5);
+    font-size: 15px;
+    margin-top: 10px;
+}
+.filter-down p{
+    padding: 7px 10px;
+}
+.filter-down p:hover{
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+.hidden{
+    display: none;
+}
+
+.heart{
+    font-size: 18px !important;
+}
+.heart:hover span{
+   display: none !important;
+}
+#products{
+    margin-top: 50px !important;
+}
+#products .flex{
+    margin-bottom: 40px;
+}
+.product-card {
+    margin-top: 0px !important; 
+}

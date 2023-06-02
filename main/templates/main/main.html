@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adaptive_main.css'%}">
+    <script src="https://kit.fontawesome.com/140219e2b5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrapper">
+            <div class="inner">
+                <div class="flex">
+                    <div class="logo">
+                        <a href="./main.html"><img src="{% static 'img/logo.png' %}" alt="logo" width="100%"></a>
+                    </div>
+                    <nav>
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'profiles:user_profile' %}"><img src="{% static 'icons/user.png' %}" alt=""></a>
+                        {% else %}
+                            <a href="{% url 'users:login' %}"><img src="{% static 'icons/user.png' %}" alt=""></a>
+                        {% endif %}
+                        <a href="./orders.html"><img src="{% static 'icons/shopping-bag.png' %}" alt=""></a>
+                        <a href="./favorite.html"><img src="{% static 'icons/heart.png' %}" alt=""></a>
+                        <a href=""><img src="{% static 'icons/shopping-cart.png' %}" alt=""></a>
+                    </nav>
+                    <div class="search-header">
+                        <input type="text" placeholder="Искать товары:">
+                        <button><img src="{% static 'icons/search.png' %}" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-mobile">
+        <div class="wrapper">
+            <div class="flex">
+                <div class="logo-mobile" onclick="return_top()">
+                    <img src="{% static 'img/logo.png' %}" alt="logo" width="100%">
+                </div>
+                <div class="burger-menu" onclick="open_close()">
+                    <div class="menu-inner">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-links">
+            <div class="wrapper">
+                <a href="./main.html"> <img src="{% static 'img/logo.png' %}" alt=""> Главная</a>
+                <a href="./about_us.html"> <img src="{% static 'icons/aboutus.png' %}" alt=""> О нас</a>
+                <a href="./market.html"> <img src="{% static 'icons/shop2.png' %}" alt=""> Маркет</a>
+                <a href="./orders.html"> <img src="{% static 'icons/shopping-bag.png' %}" alt=""> Заказы</a>
+                <a href="./favorite.html"> <img src="{% static 'icons/heart.png' %}" alt=""> Избранное</a>
+                <a href="#"> <img src="{% static 'icons/shopping-cart.png' %}" alt=""> Кoрзина</a>
+                <a href="./sale.html"> <img src="{% static 'icons/akciya.png' %}" alt=""> Акции</a>
+                <a href="#"> <img src="{% static 'icons/help.webp' %}" alt=""> Помощь</a>
+                <a href="./login.html"> <img src="{% static 'icons/user.png' %}" alt=""> Войти</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="second-nav">
+            <div class="link-nav">
+                <img src="{% static 'icons/aboutus.png' %}" alt=""><a href="./about_us.html">О нас</a>
+            </div>
+            <div class="link-nav">
+                <img src="{% static 'icons/shop2.png' %}" alt=""><a href="./market.html">Маркет</a>
+            </div>
+            <div class="link-nav">
+                <img src="{% static 'icons/akciya.png' %}" alt=""><a href="./sale.html">Акции</a>
+            </div>
+            <div class="link-nav">
+                <img src="{% static 'icons/help.webp' %}" alt=""><a href="#">Помощь</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-header-mobile">
+        <input type="text" placeholder="Искать товары:">
+        <button><img src="{% static 'icons/search.png' %}" alt=""></button>
+    </div>
+
+
+    <section id="slider">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="https://wallpaperaccess.com/full/896979.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://images.hdqwalls.com/wallpapers/clouds-hd.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://wallpaperaccess.com/full/3010033.jpg" style="width:100%">
+            </div>
+
+        </div>
+
+        <div style="text-align:center" class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <section id="categories">
+        <div class="wrapper">
+
+            <div class="name">
+                <h1>Категории</h1>
+                <a href="./market.html">Просмотреть все<i class="fa fa-long-arrow-right" style="margin-left:10px"
+                        aria-hidden="true"></i></a>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <img src="{% static 'img/mebel.png' %}" alt="">
+                    <a href="#">Мебель</a>
+                </div>
+                <div class="card card2">
+                    <img src="{% static 'img/sport.png' %}" alt="">
+                    <a href="#">Спорт</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/tehnika.png' %}" alt="">
+                    <a href="#">Электроника</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card card3">
+                    <img src="{% static 'img/eda.png' %}" alt="">
+                    <a href="#">Продукты питания</a>
+                </div>
+                <div class="two-cards">
+                    <div class="card card3">
+                        <img src="{% static 'img/medicina.png' %}" alt="">
+                        <a href="#">Медицина</a>
+                    </div>
+                    <div class="card card3">
+                        <img src="{% static 'img/books.png' %}" alt="" width="200px">
+                        <a href="#">Книги</a>
+                    </div>
+                </div>
+                <div class="card card3">
+                    <img src="{% static 'img/kids.png' %}" alt="">
+                    <a href="#">Для детей</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="wrapper">
+            <div class="name">
+                <h1>Новинки</h1>
+                <a href="">Просмотреть все<i class="fa fa-long-arrow-right" style="margin-left:10px"
+                        aria-hidden="true"></i></a>
+            </div>
+            <div class="flex">
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart" onclick="tap()">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ads">
+        <div class="wrapper">
+            <img src="{% static 'img/reklama1.png' %}" alt="">
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="wrapper">
+            <div class="name">
+                <h1>Хиты недели</h1>
+                <a href="">Просмотреть все<i class="fa fa-long-arrow-right" style="margin-left:10px"
+                        aria-hidden="true"></i></a>
+            </div>
+            <div class="flex">
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex" style="margin-top: 20px;">
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в
+                                    избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="inner-card">
+                        <div class="heart">
+                            <i class="fa fa-heart-o" aria-hidden="true"> <span>Добавить в избранное</span></i>
+                        </div>
+                        <div class="inner-info">
+                            <img src="{% static 'img/rafaello.png' %}" alt="">
+                            <h2>Rafaello</h2>
+                            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                        <div class="inner-desc">
+                            <p>300 ml</p>
+                            <p> <span>700 ₸</span></p>
+                        </div>
+                        <div class="inner-btn">
+                            <button class="default">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ads">
+        <div class="wrapper">
+            <img src="{% static 'img/reklama2.png' %}" alt="">
+        </div>
+    </section>
+
+    <section id="pre-footer">
+        <div class="wrapper">
+            <div class="text">
+                <h1>Выгода с доставкой</h1>
+                <p>Подпишитесь и получайте промокоды, акции и подборки товаров на почту.</p>
+            </div>
+            <div class="search-footer">
+                <input type="email" placeholder="Введите вашу почту:">
+                <button>Подробнее</button>
+            </div>
+            <div class="text textp">
+                <p>Нажимая «Подписаться» вы соглашаетесь с <span> Условиями использования сайта </span> и <span>
+                        Политикой обработки
+                        персональных данных. </span> </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrapper">
+            <hr>
+            <div class="footer-inner">
+                <div class="footer-flex">
+                    <div class="logo">
+                        <img src="{% static 'img/logo.png' %}" alt="">
+                        <div class="icons">
+                            <a href=""><img src="./icons/instagram-black.png" alt=""></a>
+                            <a href=""><img src="./icons/facebook.png" alt=""></a>
+                            <a href=""><img src="./icons/telegram-black.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="link">
+                        <h3>Маркетплейс</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link1">
+                            <a href="">О компании</a>
+                            <a href="">Контакты</a>
+                            <a href="">Вакансии</a>
+                            <a href="">Реквизиты</a>
+                            <a href="">Партнерская программа</a>
+                            <a href="">Настоящий маркетплейс</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="link">
+                        <h3>Покупателю</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link2">
+                            <a href="">Помощь покупателю</a>
+                            <a href="">Доставка</a>
+                            <a href="">Акции</a>
+                            <a href="">Оплата</a>
+                            <a href="">Возврат</a>
+                            <a href="">Промокоды</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="link">
+                        <h3>Правовая информация</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link3">
+                            <a href="">Условия пользования сайтом</a>
+                            <a href="">Полтика обработки персональных данных</a>
+                            <a href="">Условия заказа и доставки</a>
+                            <a href="">Правила сервиса</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="link">
+                        <h3>Магазинам</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link4">
+                            <a href="">Помощь магазинам</a>
+                            <a href="">Приглашение к сотрудничеству</a>
+                            <a href="">Вход в личный кабинет</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="logo mobile-logo">
+                        <img src="{% static 'img/logo.png' %}" alt="">
+                        <div class="icons">
+                            <a href=""><img src="./icons/instagram-black.png" alt=""></a>
+                            <a href=""><img src="./icons/facebook.png" alt=""></a>
+                            <a href=""><img src="./icons/telegram-black.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+    </script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

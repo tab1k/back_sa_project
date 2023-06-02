@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/about_us.css">
+    <link rel="stylesheet" href="./styles/adaptive_main.css">
+    <link rel="stylesheet" href="./styles/adaptive_about_us.css">
+    <script src="https://kit.fontawesome.com/140219e2b5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrapper">
+            <div class="inner">
+                <div class="flex">
+                    <div class="logo">
+                        <a href="./main.html"><img src="./images/logo.png" alt="logo" width="100%"></a>
+                    </div>
+                    <nav>
+                        <a href="./login.html"><img src="./icons/user.png" alt=""></a>
+                        <a href="./orders.html"><img src="./icons/shopping-bag.png" alt=""></a>
+                        <a href="./favorite.html"><img src="./icons/heart.png" alt=""></a>
+                        <a href=""><img src="./icons/shopping-cart.png" alt=""></a>
+                    </nav>
+                    <div class="search-header">
+                        <input type="text" placeholder="Искать товары:">
+                        <button><img src="./icons/search.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header-mobile">
+        <div class="wrapper">
+            <div class="flex">
+                <div class="logo-mobile" onclick="return_top()">
+                    <img src="./images/logo.png" alt="logo" width="100%">
+                </div>
+                <div class="burger-menu" onclick="open_close()">
+                    <div class="menu-inner">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-links">
+            <div class="wrapper">
+                <a href="./main.html"> <img src="./images/logo.png" alt=""> Главная</a>
+                <a href="./about_us.html"> <img src="./icons/aboutus.png" alt=""> О нас</a>
+                <a href="./market.html"> <img src="./icons/shop2.png" alt=""> Маркет</a>
+                <a href="./orders.html"> <img src="./icons/shopping-bag.png" alt=""> Заказы</a>
+                <a href="./favorite.html"> <img src="./icons/heart.png" alt=""> Избранное</a>
+                <a href="#"> <img src="./icons/shopping-cart.png" alt=""> Кoрзина</a>
+                <a href="./sale.html"> <img src="./icons/akciya.png" alt=""> Акции</a>
+                <a href="#"> <img src="./icons/help.webp" alt=""> Помощь</a>
+                <a href="./login.html"> <img src="./icons/user.png" alt=""> Войти</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="second-nav">
+            <div class="link-nav">
+                <img src="./icons/aboutus.png" alt=""><a href="./about_us.html">О нас</a>
+            </div>
+            <div class="link-nav">
+                <img src="./icons/shop2.png" alt=""><a href="./market.html">Маркет</a>
+            </div>
+            <div class="link-nav">
+                <img src="./icons/akciya.png" alt=""><a href="./sale.html">Акции</a>
+            </div>
+            <div class="link-nav">
+                <img src="./icons/help.webp" alt=""><a href="#">Помощь</a>
+            </div>
+        </div>
+    </div>
+    <div class="search-header-mobile">
+        <input type="text" placeholder="Искать товары:">
+        <button><img src="./icons/search.png" alt=""></button>
+    </div>
+
+    <section id="about">
+        <div class="wrapper">
+            <div class="about-flex">
+                <div class="about-text">
+                    <h1> О нас </h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum</p>
+                </div>
+                <img src="./images/logo.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="advant">
+        <div class="wrapper">
+            <img src="./images/+.png" alt="">
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="wrapper">
+            <div class="about-flex reverse">
+                <div class="about-text">
+                    <h1> О нас </h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum</p>
+                </div>
+                <img src="./images/logo.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="partners">
+        <div class="wrapper">
+            <div class="name">
+                <h1>Наши партнеры</h1>
+            </div>
+            <div class="row">
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+
+
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="./images/partner1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="pre-footer">
+        <div class="wrapper">
+            <div class="text">
+                <h1>Выгода с доставкой</h1>
+                <p>Подпишитесь и получайте промокоды, акции и подборки товаров на почту.</p>
+            </div>
+            <div class="search-footer">
+                <input type="email" placeholder="Введите вашу почту:">
+                <button>Подробнее</button>
+            </div>
+            <div class="text textp">
+                <p>Нажимая «Подписаться» вы соглашаетесь с <span> Условиями использования сайта </span> и <span>
+                        Политикой обработки
+                        персональных данных. </span> </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <hr>
+            <div class="footer-inner">
+                <div class="footer-flex">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="">
+                        <div class="icons">
+                            <a href=""><img src="./icons/instagram-black.png" alt=""></a>
+                            <a href=""><img src="./icons/facebook.png" alt=""></a>
+                            <a href=""><img src="./icons/telegram-black.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="link">
+                        <h3>Маркетплейс</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link1">
+                            <a href="">О компании</a>
+                            <a href="">Контакты</a>
+                            <a href="">Вакансии</a>
+                            <a href="">Реквизиты</a>
+                            <a href="">Партнерская программа</a>
+                            <a href="">Настоящий маркетплейс</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="link">
+                        <h3>Покупателю</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link2">
+                            <a href="">Помощь покупателю</a>
+                            <a href="">Доставка</a>
+                            <a href="">Акции</a>
+                            <a href="">Оплата</a>
+                            <a href="">Возврат</a>
+                            <a href="">Промокоды</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="link">
+                        <h3>Правовая информация</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link3">
+                            <a href="">Условия пользования сайтом</a>
+                            <a href="">Полтика обработки персональных данных</a>
+                            <a href="">Условия заказа и доставки</a>
+                            <a href="">Правила сервиса</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="link">
+                        <h3>Магазинам</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link4">
+                            <a href="">Помощь магазинам</a>
+                            <a href="">Приглашение к сотрудничеству</a>
+                            <a href="">Вход в личный кабинет</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="logo mobile-logo">
+                        <img src="./images/logo.png" alt="">
+                        <div class="icons">
+                            <a href=""><img src="./icons/instagram-black.png" alt=""></a>
+                            <a href=""><img src="./icons/facebook.png" alt=""></a>
+                            <a href=""><img src="./icons/telegram-black.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+    </script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+/* Large device */
+@media only screen and (max-width: 1200px){
+
+}
+/* Medium device/desktops */
+@media only screen and (max-width: 992px){
+
+}
+/* Small device/tablets */
+@media only screen and (max-width: 768px){
+
+}
+/* Extra small device/phone */
+@media only screen and (max-width: 480px){
+    .orders-list{
+        display: none;
+    }
+    .orders-row{
+        width: 50%;
+    }
+    .orders-row:nth-child(3), .orders-row:nth-child(4),.orders-row:nth-child(5), .orders-row:nth-child(6){
+        display: none;
+    }
+    .orders-row:nth-child(1), .orders-row:nth-child(2){
+        display: block;
+    }
+}

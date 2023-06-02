@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adaptive_login.css' %}">
+    <script src="https://kit.fontawesome.com/140219e2b5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="popup">
+        <div class="popup_form">
+            <form method="POST" class="form">
+                {% csrf_token %}
+                <div class="input">
+                    <label for="{{ form.username.id_for_label }}"><b>Логин</b></label>
+                    {{ form.username }}
+                </div>
+
+                <div class="input">
+                    <label for="{{ form.password.id_for_label }}"><b>Пароль</b></label>
+                    {{ form.password }}
+                </div>
+
+                <div class="input">
+                    <label for="{{ form.checkbox.id_for_label }}">Запомнить меня</label>
+                    {{ form.checkbox }}
+                </div>
+
+                <div class="input">
+                    <input type="submit" value="Войти">
+                    <a href="#">Забыли пароль?</a>
+                </div>
+
+                <p>Нужен аккаунт? <a href="{% url 'users:signin' %}">Зарегистрируйтесь</a></p>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

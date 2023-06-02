@@ -1,0 +1,96 @@
+/* Large device */
+@media only screen and (max-width: 1200px){
+    .row {
+        margin-bottom: 0px;
+    }
+    .row .card img {
+        width: 150px;
+    }
+    .btn-container button:hover{
+        border-width: 1.6px;
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 20px;
+        font-size: 12px;
+        border-color: #0353a4;
+        color: #0353a4;
+        background-color: transparent;
+        top: 0px; 
+        box-shadow: none;
+    }
+}
+/* Medium device/desktops */
+@media only screen and (max-width: 992px){
+    .row {
+        margin-bottom: 5px;
+    }
+    .row .card img {
+        width: 150px;
+    }
+    .btn-container button:hover{
+        border-width: 1.6px;
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 20px;
+        font-size: 12px;
+        border-color: #0353a4;
+        color: #0353a4;
+        background-color: transparent;
+        top: 0px; 
+        box-shadow: none;
+    }
+
+}
+/* Small device/tablets */
+@media only screen and (max-width: 768px){
+    .row {
+        margin-bottom: 0px;
+    }
+    .btn-container button{
+        border-width: 1.6px;
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+    .btn-container button:hover{
+        border-width: 1.6px;
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 20px;
+        font-size: 12px;
+        border-color: #0353a4;
+        color: #0353a4;
+        background-color: transparent;
+        top: 0px; 
+        box-shadow: none;
+    }
+}
+/* Extra small device/phone */
+@media only screen and (max-width: 480px){
+    .row {
+        margin-bottom: 0px;
+    }
+    .btn-container {
+        margin-top: 10px;
+    }
+    .btn-container button{
+        border-width: 1.6px;
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+    .btn-container button:hover{
+        border-width: 1.6px;
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 20px;
+        font-size: 12px;
+        border-color: #0353a4;
+        color: #0353a4;
+        background-color: transparent;
+        top: 0px; 
+        box-shadow: none;
+    }
+}

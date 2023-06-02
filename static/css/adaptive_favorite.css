@@ -1,0 +1,51 @@
+/* Large device */
+@media only screen and (max-width: 1200px){
+    .fa-caret-down {
+        margin-left: 5%;
+    }
+}
+/* Medium device/desktops */
+@media only screen and (max-width: 992px){
+    .fa-caret-down {
+        margin-left: 5%;
+    }
+}
+/* Small device/tablets */
+@media only screen and (max-width: 768px){
+    .fa-caret-down {
+        margin-left: 5%;
+    }
+}
+/* Extra small device/phone */
+@media only screen and (max-width: 480px){
+    .left{
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .flex-search, .filter {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .flex-search input{
+            font-size: 10px;
+            padding: 10px !important;
+    }
+    .flex-search button i {
+        font-size: 14px;
+    }
+    .filter-up, .filter-down .flex-search input{
+        padding: 10px;
+    }
+    .filter-down p {
+        padding: 7px 0;
+    }
+    .filter-down p:hover{
+        background-color: transparent;
+    }
+    .fa-caret-down {
+        margin-left: 5%;
+    }
+    .filter-down{
+        margin-top: 5px;
+    }
+}
